@@ -18,6 +18,6 @@ class rubymine {
     require      => File["${gitignore}"],
     subscribe    => File["${gitignore}"],
     refreshonly  => true,
-    onlyif       => "grep -c \.idea ${gitignore}",
+    onlyif       => "grep -c \\.idea ${gitignore}",
   }
 }
