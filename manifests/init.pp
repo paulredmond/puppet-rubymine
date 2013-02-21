@@ -16,7 +16,6 @@ class rubymine {
 
   exec { "echo .idea >> ${gitignore}":
     require      => File["${gitignore}"],
-    subscribe    => File["${gitignore}"],
     onlyif       => "grep -c \\.idea ${gitignore}",
   }
 }
